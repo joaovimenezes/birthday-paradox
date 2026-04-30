@@ -25,7 +25,7 @@ A função `randomGenerator(int range)` é responsável por gerar um número ale
 
 A função `birthdayGenerator()` utiliza o `randomGenerator` para sortear um dia do ano entre 0 e 364, representando os 365 dias.
 
-A função `birthdaySimulator(int groupNumber)` simula uma rodada completa. Ela utiliza um array auxiliar `calender[365]`, inicializado com zeros, para verificar se um aniversário já foi sorteado anteriormente. Ao encontrar a primeira colisão, retorna 1 imediatamente. Caso percorra todo o grupo sem colisão, retorna 0.
+A função `birthdaySimulator(int groupSize)` simula uma rodada completa. Ela utiliza um array auxiliar `calender[365]`, inicializado com zeros, para verificar se um aniversário já foi sorteado anteriormente. Ao encontrar a primeira colisão, retorna 1 imediatamente. Caso percorra todo o grupo sem colisão, retorna 0.
 
 Por fim, a função `main()` controla toda a execução do programa. Ela inicializa a aleatoriedade com `srand(time(NULL))`, recebe o tamanho do grupo e a quantidade de simulações, executa as rodadas e exibe a probabilidade resultante. A execução ocorre dentro de um loop `do...while`, permitindo rodar múltiplos cenários sem reiniciar o programa.
 
@@ -37,38 +37,34 @@ A partir das simulações realizadas, é possível observar na prática o compor
 Probabilidade teórica esperada: ~11,70%. Exemplo computacional com 1 milhão de simulações:
 ```bash
 simulations: 1000000
-group number: 10
-eqB: 116948
-S: 1000000
-Probability: 11.69%
+group size: 10
+same birthdays: 116948
+probability: 11.69%
 ```
 
 ### Grupo de 23 pessoas
 Probabilidade teórica esperada: ~50,70%. Exemplo computacional com 1 milhão de simulações:
 ```bash
 simulations: 1000000
-group number: 23
-eqB: 507243
-S: 1000000
-Probability: 50.72%
+group size: 23
+same birthdays: 507243
+probability: 50.72%
 ```
 
 ### Grupo de 50 pessoas
 Probabilidade teórica esperada: ~97,00%. Exemplo computacional com 1 milhão de simulações:
 ```bash
 simulations: 1000000
-group number: 50
-eqB: 970183
-S: 1000000
-Probability: 97.02%
+group size: 50
+same birthdays: 970183
+probability: 97.02%
 ```
 
 ### Grupo de 365 pessoas
 Probabilidade teórica esperada: ~99,9999%. Exemplo computacional com 1 milhão de simulações:
 ```bash
 simulations: 1000000
-group number: 365
-eqB: 1000000
-S: 1000000
-Probability: 100.00%
+group size: 365
+same birthdays: 1000000
+probability: 100.00%
 ```
