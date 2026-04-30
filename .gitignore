@@ -1,0 +1,17 @@
+# Compiled output
+*.exe
+*.out
+*.app
+*.so
+*.o
+*.a
+
+# Debug
+*.d
+
+# Output Folder
+output/
+
+# IDE and System files
+.vscode/
+.vs/
